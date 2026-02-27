@@ -20,8 +20,8 @@ export function About() {
         transition={{ duration: 0.5 }}
         className="mb-24"
       >
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-light tracking-tight">
-          About
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-amber-light tracking-tight">
+          Our Story
         </h1>
       </motion.header>
 

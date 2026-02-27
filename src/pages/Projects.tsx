@@ -12,7 +12,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <PageVideoBackground>
+    <PageVideoBackground videoSrc="/abstract.mp4">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-28 pb-24">
       <motion.header
         initial={{ opacity: 0, y: 20 }}

@@ -1,8 +1,9 @@
 interface PageVideoBackgroundProps {
   children: React.ReactNode
+  videoSrc?: string
 }
 
-export function PageVideoBackground({ children }: PageVideoBackgroundProps) {
+export function PageVideoBackground({ children, videoSrc = '/star.mp4' }: PageVideoBackgroundProps) {
   return (
     <div className="relative min-h-screen">
       {/* Fixed video background */}
@@ -15,7 +16,7 @@ export function PageVideoBackground({ children }: PageVideoBackgroundProps) {
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden
         >
-          <source src="/star.mp4" type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
         <div
           className="absolute inset-0 pointer-events-none"

@@ -41,14 +41,12 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20 lg:h-24">
         <Link to="/" className="flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-amber-light text-amber-light font-serif text-lg font-medium">
-            A
-          </span>
+          <img src="/logo.png" alt="Auranie Studio" className="h-16 w-auto" />
           <span className="flex flex-col leading-tight">
             <span className="text-sm font-sans font-medium text-light tracking-[0.2em] uppercase">
               Auranie
             </span>
-            <span className="text-sm font-sans font-medium text-light tracking-[0.2em] uppercase">
+            <span className="text-sm font-sans font-medium text-amber-light tracking-[0.2em] uppercase">
               Studio
             </span>
           </span>

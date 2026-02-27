@@ -69,7 +69,7 @@ export function Home() {
           </motion.p>
           <motion.div variants={item} className="pt-6">
             <Link
-              to="/contact"
+              to="/services"
               className="inline-flex items-center gap-3 px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.25em] uppercase rounded-sm hover:bg-amber-light/10 transition-colors duration-300"
             >
               Explore
