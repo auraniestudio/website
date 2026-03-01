@@ -13,7 +13,7 @@ export function Contact() {
 
   return (
     <PageVideoBackground videoSrc="/smoke.mp4">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-28 pb-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-40 lg:pt-48 pb-24">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 lg:items-start">
           {/* Left: GET IN TOUCH + copy + CONNECT WITH US + social links */}
           <motion.div
@@ -100,11 +100,11 @@ export function Contact() {
                 </div>
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.2em] uppercase rounded-sm hover:bg-amber-light/10 transition-colors duration-300"
+                  className="group relative overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.2em] uppercase rounded-sm transition-colors duration-300"
                 >
-                  Send message
+                  <span className="absolute left-0 top-0 h-full w-0 bg-amber-light transition-[width] duration-300 ease-out group-hover:w-full" aria-hidden />
+                  <span className="relative z-10 group-hover:text-dark">Send message</span>
                 </motion.button>
               </motion.form>
             )}

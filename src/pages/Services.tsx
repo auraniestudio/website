@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { PageVideoBackground } from '../components/PageVideoBackground'
 
@@ -39,8 +40,11 @@ export function Services() {
         transition={{ duration: 0.5 }}
         className="max-w-2xl mb-20"
       >
+        <p className="text-sm font-sans font-medium text-amber-light tracking-[0.3em] uppercase">
+              WHAT WE DO
+            </p>
         <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-light tracking-tight">
-          Services
+          OurServices
         </h1>
         <p className="mt-6 text-lg text-light/60 font-light">
           We offer a focused set of premium services designed to elevate brands and experiences.
@@ -64,6 +68,20 @@ export function Services() {
           </motion.article>
         ))}
       </div>
+        <div className="mt-16 flex justify-center">
+          <Link
+            to="/contact"
+            className="group relative inline-flex items-center gap-3 overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.25em] uppercase rounded-sm transition-colors duration-300"
+          >
+            <span className="absolute left-0 top-0 h-full w-0 bg-amber-light transition-[width] duration-300 ease-out group-hover:w-full" aria-hidden />
+            <span className="relative z-10 flex items-center gap-3 group-hover:text-dark">
+              Contact now
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </Link>
+        </div>
       </div>
     </PageVideoBackground>
   )
