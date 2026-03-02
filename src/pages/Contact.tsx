@@ -22,15 +22,19 @@ export function Contact() {
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
-            <p className="text-sm font-sans font-medium text-amber-light tracking-[0.3em] uppercase">
+            <p className="text-sm font-sans font-medium text-amber-light tracking-[0.3em] uppercase mb-4 mt-4">
               GET IN TOUCH
             </p>
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-light tracking-tight leading-[1.1]">
               Let's Create
-              <span className="block text-[#d4af37]">Something Great</span>
+              <span className="block text-[#d4af37]">Something Great!</span>
             </h1>
             <p className="text-lg text-light/70 font-light leading-relaxed max-w-md">
-              Ready to transform your digital presence? We'd love to hear about your project. Reach out and let's start a conversation.
+              Ready to transform your digital presence? 
+              <br />
+              We'd love to hear about your project. 
+              <br />
+              Reach out and let's start a conversation.
             </p>
             <div className="pt-6">
               <p className="text-sm font-sans font-medium text-light/60 tracking-[0.2em] uppercase mb-4">

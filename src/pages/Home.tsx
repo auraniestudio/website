@@ -65,11 +65,11 @@ export function Home() {
             variants={item}
             className="text-base sm:text-lg text-light/75 max-w-xl mx-auto font-light tracking-wide leading-relaxed"
           >
-            We transform ambitious ideas into stunning digital experiences that captivate, engage, and convert.
+            Modern web development & secure digital solutions.
           </motion.p>
           <motion.div variants={item} className="pt-6">
             <Link
-              to="/contact"
+              to="/projects"
               className="group relative inline-flex items-center gap-3 overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.25em] uppercase rounded-sm transition-colors duration-300"
             >
               <span className="absolute left-0 top-0 h-full w-0 bg-amber-light transition-[width] duration-300 ease-out group-hover:w-full" aria-hidden />

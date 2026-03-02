@@ -41,7 +41,7 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20 lg:h-24">
         <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="Auranie Studio" className="h-16 w-auto" />
+          <img src="/logo.png" alt="Web Design & Development Studio" className="h-16 w-auto" />
           <span className="flex flex-col leading-tight">
             <span className="text-sm font-sans font-medium text-light tracking-[0.2em] uppercase">
               Auranie

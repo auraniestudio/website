@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-12">
           <div>
             <Link to="/" className="flex items-center gap-3">
-              <img src="/logo.png" alt="Auranie Studio" className="h-9 w-auto" />
+              <img src="/logo.png" alt="Web Design & Development Studio" className="h-9 w-auto" />
               <span className="font-sans text-sm font-medium text-light tracking-[0.15em] uppercase">
                 Auranie <br />
                 <span className="text-amber-light">Studio</span>
