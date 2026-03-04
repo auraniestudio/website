@@ -1,22 +1,23 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { PageVideoBackground } from '../components/PageVideoBackground'
 
 const services = [
   {
-    title: 'Brand Strategy',
-    description: 'Define your narrative and position in the market with clarity and intention.',
+    title: 'Web Development',
+    description: 'Custom built websites with clean architecture, responsive design, and scalable structure from landing pages to full platforms.',
   },
   {
-    title: 'Visual Identity',
-    description: 'Distinctive logos, typography, and visual systems that endure.',
+    title: 'User Friendly Design',
+    description: 'Translating design concepts into interactive web pages, making sure websites are user-friendly, intuitive, and visually appealing.',
   },
   {
-    title: 'Digital Experiences',
-    description: 'Websites and digital products that feel refined and effortless.',
+    title: 'Performance and Optimization',
+    description: 'Ensuring scalability for future growth, with performance and optimization.',
   },
   {
-    title: 'Art Direction',
-    description: 'Cohesive creative direction for campaigns, lookbooks, and content.',
+    title: 'Security and Maintenance',
+    description: 'Implementing security best practices to protect your website and data.',
   },
 ]
 
@@ -39,11 +40,14 @@ export function Services() {
         transition={{ duration: 0.5 }}
         className="max-w-2xl mb-20"
       >
+        <p className="text-sm font-sans font-medium text-amber-light tracking-[0.3em] uppercase mb-4 mt-4">
+              WHAT WE DO
+            </p>
         <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-light tracking-tight">
-          Services
+          Our Services
         </h1>
         <p className="mt-6 text-lg text-light/60 font-light">
-          We offer a focused set of premium services designed to elevate brands and experiences.
+          We design and develop modern digital solutions.
         </p>
       </motion.header>
 
@@ -64,6 +68,20 @@ export function Services() {
           </motion.article>
         ))}
       </div>
+        <div className="mt-16 flex justify-center">
+          <Link
+            to="/projects"
+            className="group relative inline-flex items-center gap-3 overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.25em] uppercase rounded-sm transition-colors duration-300"
+          >
+            <span className="absolute left-0 top-0 h-full w-0 bg-amber-light transition-[width] duration-300 ease-out group-hover:w-full" aria-hidden />
+            <span className="relative z-10 flex items-center gap-3 group-hover:text-dark">
+              Check out our projects
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </Link>
+        </div>
       </div>
     </PageVideoBackground>
   )
