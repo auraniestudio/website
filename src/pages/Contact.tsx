@@ -42,14 +42,14 @@ export function Contact() {
 
   return (
     <PageVideoBackground videoSrc="/smoke.mp4">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-40 lg:pt-48 pb-24">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 lg:items-start">
-          {/* Left: GET IN TOUCH + copy + CONNECT WITH US + social links */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-28 lg:pt-48 pb-24">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20 lg:items-start">
+          {/* 1) GET IN TOUCH + copy — first on mobile, left top on desktop */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-8"
+            className="order-1 space-y-8 lg:col-start-1 lg:row-start-1"
           >
             <p className="text-sm font-sans font-medium text-amber-light tracking-[0.3em] uppercase mb-4 mt-4">
               GET IN TOUCH
@@ -62,19 +62,11 @@ export function Contact() {
               Ready to transform your digital presence? 
               <br />
               We'd love to hear about your project. 
-              <br />
-              Reach out and let's start a conversation.
             </p>
-            <div className="pt-6">
-              <p className="text-sm font-sans font-medium text-light/60 tracking-[0.2em] uppercase mb-4">
-                CONNECT WITH US
-              </p>
-              <SocialLinks />
-            </div>
           </motion.div>
 
-          {/* Right: contact form */}
-          <div className="lg:pl-4">
+          {/* 2) Contact form — second on mobile, right column on desktop */}
+          <div className="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:pl-4">
             {submitted ? (
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
@@ -140,7 +132,7 @@ export function Contact() {
                   type="submit"
                   disabled={sending}
                   whileTap={sending ? undefined : { scale: 0.98 }}
-                  className="group relative overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.2em] uppercase rounded-sm transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="group relative overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.2em] uppercase rounded-sm transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed !mt-4"
                 >
                   <span className="absolute left-0 top-0 h-full w-0 bg-amber-light transition-[width] duration-300 ease-out group-hover:w-full" aria-hidden />
                   <span className="relative z-10 group-hover:text-dark">
@@ -150,6 +142,21 @@ export function Contact() {
               </motion.form>
             )}
           </div>
+
+          {/* 3) CONNECT WITH US + social — third on mobile, left below intro on desktop */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="order-3 pt-6 text-center lg:text-left lg:col-start-1 lg:row-start-2 lg:pt-8"
+          >
+            <p className="text-sm font-sans font-medium text-light/60 tracking-[0.2em] uppercase mb-4">
+              CONNECT WITH US
+            </p>
+            <div className="flex justify-center lg:justify-start">
+              <SocialLinks size="large" />
+            </div>
+          </motion.div>
         </div>
       </div>
     </PageVideoBackground>
