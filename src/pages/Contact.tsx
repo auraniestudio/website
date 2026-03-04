@@ -2,13 +2,42 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { PageVideoBackground } from '../components/PageVideoBackground'
 import { SocialLinks } from '../components/SocialLinks'
+import { CONTACT } from '../config/contact'
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
+    const formId = CONTACT.formspreeFormId
+    if (!formId) {
+      setError('Form is not configured. Please add your Formspree form ID in src/config/contact.ts')
+      return
+    }
+    setError(null)
+    setSending(true)
+    const form = e.currentTarget
+    const payload = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+      _replyto: (form.elements.namedItem('email') as HTMLInputElement).value,
+    }
+    try {
+      const res = await fetch(`https://formspree.io/f/${formId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      if (!res.ok) throw new Error('Something went wrong')
+      setSubmitted(true)
+    } catch {
+      setError('Failed to send. Please try again or email us directly.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -63,6 +92,11 @@ export function Contact() {
                 onSubmit={handleSubmit}
                 className="space-y-8"
               >
+                {error && (
+                  <p className="text-sm text-red-400" role="alert">
+                    {error}
+                  </p>
+                )}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-light/80 mb-2">
                     Name
@@ -104,11 +138,14 @@ export function Contact() {
                 </div>
                 <motion.button
                   type="submit"
-                  whileTap={{ scale: 0.98 }}
-                  className="group relative overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.2em] uppercase rounded-sm transition-colors duration-300"
+                  disabled={sending}
+                  whileTap={sending ? undefined : { scale: 0.98 }}
+                  className="group relative overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.2em] uppercase rounded-sm transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <span className="absolute left-0 top-0 h-full w-0 bg-amber-light transition-[width] duration-300 ease-out group-hover:w-full" aria-hidden />
-                  <span className="relative z-10 group-hover:text-dark">Send message</span>
+                  <span className="relative z-10 group-hover:text-dark">
+                    {sending ? 'Sending...' : 'Send message'}
+                  </span>
                 </motion.button>
               </motion.form>
             )}

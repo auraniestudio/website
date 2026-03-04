@@ -41,10 +41,10 @@ export function About() {
               animate="visible"
             >
               <p className="text-light/50 text-base font-light italic mt-8">
-              Auranie Studio, founded by Oranee Kasem, is built on formal studies in Information Technology and Software Development, 
-              with advanced focus in Cloud Computing and Cybersecurity.
+              Auranie Studio is a registered New Zealand company delivering websites that are secure, scalable, and future-ready.
+Founded by Oranee Kasem, built on IT and Software Development expertise with advanced Cloud and Cybersecurity knowledge.
               <br />
-              Ensuring your website isn't just functional, but secure and scalable.
+          <br />            
               </p>
             </motion.section>
           </div>
@@ -75,22 +75,22 @@ export function About() {
                 <p className="text-light/75 text-lg leading-relaxed font-light">
               <span className="font-bold">Driven by vision. Built with purpose.</span> 
 <br />
-    Auranie Studio is a digital studio focused on creating modern, secure, and scalable digital experiences for a fast-moving world. <br />
+    Auranie Studio is a digital studio focused on creating modern, secure, and scalable digital experiences. <br />
 <br />
     We believe technology should not only function, it should inspire.
 <br />
     We design and develop custom websites and digital solutions that combine clean aesthetics with strong technical architecture.
 <br />
 <br />
-    From web development and system design to cloud-ready infrastructure and security-focused thinking, our work is built for performance, 
-    reliability, and long-term growth.
+From web development and system design to cloud-ready infrastructure and security-first thinking, our work is built for performance, reliability, 
+and long-term growth. 
 <br />
-    Every project is approached with clarity, creativity, and intention, transforming ideas into impactful digital experiences.
+Every project is approached with clarity, creativity, and intention, transforming ideas into meaningful digital experiences.
 <br />
 <br />
 </p>
     <p className="text-amber-light text-lg leading-relaxed font-light">
-    <span className="font-bold">Based in Wellington, NZ</span>
+    <span className="font-bold">Based in Wellington, NZ </span>
 <br />
    <span className="font-bold">Built for everywhere.</span>
                 </p>
