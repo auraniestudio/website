@@ -8,6 +8,7 @@ import { Services } from './pages/Services'
 import { About } from './pages/About'
 import { Projects } from './pages/Projects'
 import { Contact } from './pages/Contact'
+import { QA } from './pages/QA'
 
 function App() {
   const location = useLocation()
@@ -23,6 +24,7 @@ function App() {
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />
             <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+            <Route path="/qa" element={<PageTransition><QA /></PageTransition>} />
           </Routes>
         </AnimatePresence>
       </main>

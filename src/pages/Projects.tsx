@@ -1,4 +1,5 @@
 import { useRef, useState, useCallback, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { PageVideoBackground } from '../components/PageVideoBackground'
 
@@ -137,6 +138,17 @@ export function Projects() {
             </motion.article>
           ))}
           </div>
+        </div>
+        <div className="mt-16 flex justify-center">
+          <Link
+            to="/contact"
+            className="group relative inline-flex items-center gap-3 overflow-hidden px-8 py-4 border border-amber-light text-light font-sans text-xs font-medium tracking-[0.25em] uppercase rounded-sm transition-colors duration-300"
+          >
+            <span className="absolute left-0 top-0 h-full w-0 bg-amber-light transition-[width] duration-300 ease-out group-hover:w-full" aria-hidden />
+            <span className="relative z-10 group-hover:text-dark">
+            Start your project with us
+            </span>
+          </Link>
         </div>
       </div>
     </PageVideoBackground>

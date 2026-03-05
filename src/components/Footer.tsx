@@ -38,6 +38,9 @@ Driven by vision. Built with purpose.
             <Link to="/contact" className="text-sm text-light/60 hover:text-amber-light transition-colors tracking-wide">
               Contact
             </Link>
+            <Link to="/qa" className="text-sm text-light/60 hover:text-amber-light transition-colors tracking-wide">
+              Q&A
+            </Link>
           </nav>
           <div className="flex flex-col gap-3 text-sm items-center lg:items-center">
             <span className="font-sans font-medium text-light tracking-[0.15em] uppercase text-amber-light">Contact</span>
