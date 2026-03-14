@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import { PageVideoBackground } from '../components/PageVideoBackground'
 
 const projects = [
-  { id: 1, title: 'Cake', category: 'Brand Showcase', image: '/public/projects/cake.png', url: 'https://delighttscakery.vercel.app/' },
-  { id: 2, title: 'Atelier No. 7', category: 'Digital Experience', image: '/projects/project-2.jpg', url: 'https://example.com' },
+  { id: 1, title: 'Cake', category: 'Brand Showcase', image: '/projects/cake.png', url: 'https://delighttscakery.vercel.app/' },
+  { id: 2, title: 'Lumière Restaurant', category: 'Restaurant', image: '/lumièreRestaurant.png', url: 'https://restaurant-lumiere-ten.vercel.app/' },
   { id: 3, title: 'Sundial', category: 'Art Direction', image: '/projects/project-3.jpg', url: 'https://example.com' },
   { id: 4, title: 'Meridian', category: 'Brand Strategy', image: '/projects/project-4.jpg', url: 'https://example.com' },
   { id: 5, title: 'Vault', category: 'Visual Identity', image: '/projects/project-5.jpg', url: 'https://example.com' },

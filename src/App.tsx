@@ -10,6 +10,7 @@ import { Projects } from './pages/Projects'
 import { Contact } from './pages/Contact'
 import { QA } from './pages/QA'
 
+
 function App() {
   const location = useLocation()
 
