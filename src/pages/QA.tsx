@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: 'How long does a typical project take?',
-    answer: 'Timeline depends on scope—from a few weeks for a simple site to several months for larger platforms. We’ll give you a clear timeline after discussing your needs.',
+    answer: 'Timeline depends on scope. From a few weeks for a simple site to several months for larger platforms. We’ll give you a clear timeline after discussing your needs.',
   },
   {
     question: 'Do you work with clients remotely?',

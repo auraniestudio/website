@@ -5,10 +5,10 @@ import { SocialLinks } from './SocialLinks'
 export function Footer() {
   return (
     <footer className="relative z-10 bg-black border-t border-dark-border mt-10 py-8 lg:mt-16 lg:py-0">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-0 pb-8 lg:py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-0 pb-5 lg:pt-16 lg:pb-6">
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:flex-row lg:justify-between gap-10 lg:gap-20">
           <div className="max-w-xs">
-            <Link to="/" className="flex items-center justify-center gap-3 lg:justify-start">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center justify-center gap-3 lg:justify-start">
               <img src="/logo.png" alt="Web Design & Development Studio" className="h-10 w-auto" />
               <span className="font-sans text-sm font-medium text-light tracking-[0.15em] uppercase">
                 Auranie <br />
@@ -57,7 +57,7 @@ Driven by vision. Built with purpose.
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="mt-6 pt-6 border-t border-dark-border text-xs text-light/50 text-center lg:mt-8 lg:pt-8 lg:text-sm"
+          className="mt-12 pt-6 border-t border-dark-border text-xs text-light/50 text-center lg:mt-12 lg:pt-8 lg:text-sm"
         >
           © {new Date().getFullYear()} Auranie Studio. All rights reserved.
         </motion.div>

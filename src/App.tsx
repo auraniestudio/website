@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import { ScrollToTop } from './components/ScrollToTop'
 import { PageTransition } from './components/PageTransition'
 import { Home } from './pages/Home'
 import { Services } from './pages/Services'
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Header />
       <main className="min-h-screen">
         <AnimatePresence mode="wait">

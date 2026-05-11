@@ -15,7 +15,13 @@ function NavLink({ path, label }: { path: string; label: string }) {
   const isActive = location.pathname === path
 
   return (
-    <Link to={path} className="group relative py-2 text-xs font-medium text-light/90 tracking-[0.2em] uppercase inline-block">
+    <Link
+      to={path}
+      onClick={() => {
+        if (path === '/') window.scrollTo(0, 0)
+      }}
+      className="group relative py-2 text-xs font-medium text-light/90 tracking-[0.2em] uppercase inline-block"
+    >
       <span className="relative z-10">{label}</span>
       <motion.span
         className="absolute bottom-0 left-0 h-px bg-amber-light origin-left"
@@ -40,7 +46,7 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50 bg-dark/70 backdrop-blur-md border-b border-dark-border/50"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20 lg:h-24">
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-3">
           <img src="/logo.png" alt="Web Design & Development Studio" className="h-16 w-auto" />
           <span className="flex flex-col leading-tight">
             <span className="text-sm font-sans font-medium text-light tracking-[0.2em] uppercase">
@@ -98,7 +104,10 @@ export function Header() {
                 >
                   <Link
                     to={item.path}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={() => {
+                      setMobileOpen(false)
+                      if (item.path === '/') window.scrollTo(0, 0)
+                    }}
                     className="block font-sans text-sm text-light tracking-[0.15em] uppercase py-2"
                   >
                     {item.label}
